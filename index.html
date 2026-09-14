@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runner 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+
+  <div id="hud">
+    <div id="score">Score : 0</div>
+    <div id="best">Meilleur : 0</div>
+  </div>
+
+  <div id="start-screen" class="overlay">
+    <h1>Runner 3D</h1>
+    <p>Évite les obstacles, ramasse les pièces d'or et va le plus loin possible !</p>
+    <p class="controls">
+      <b>← → / A D</b> : changer de voie<br />
+      <b>↑ / W / Espace</b> : sauter<br />
+      <b>↓ / S</b> : glisser
+    </p>
+    <button id="start-btn">Jouer</button>
+  </div>
+
+  <div id="game-over-screen" class="overlay hidden">
+    <h1>Perdu !</h1>
+    <p id="final-score">Score : 0</p>
+    <button id="restart-btn">Rejouer</button>
+  </div>
+
+  <div id="mobile-controls" class="hidden">
+    <button id="btn-left">◀</button>
+    <button id="btn-jump">▲</button>
+    <button id="btn-right">▶</button>
+  </div>
+
+  <script src="vendor/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
